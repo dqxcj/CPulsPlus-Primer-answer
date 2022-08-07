@@ -137,3 +137,66 @@ decltype(odd) &arrPtr(int i) {
  string _make_plural(size_t ctr, const string &word, const string &ending = "s");
 ```
 原因是**在给定的作用域中，一个形参只能被赋予一次默认实参**，而我在函数声明和函数定义处都赋予了默认实参。
+
+
+## 6.43
+(a)放在头文件。内联函数定义需要放在头文件中，防止多次定义不一致。
+(b)放在头文件。函数声明要放在头文件中
+
+## 6.44
+```C++
+inline bool isShorter(const string &s1, const string &s2) {
+    return s1.size() < s2.size();
+}
+```
+
+## 6.45
+部分是，部分不是。内联函数在调用函数处展开，借此减少调用函数的消耗，适用于规模小、调用频繁的函数。如果规模较大，那么展开时的消耗可能会比调用的消耗更大；如果调用不频繁，那么内联函数的消耗相对调用函数的消耗的减少并不明显。以往的函数，如果其规模较小，那就可以改写成内联函数形式；但如果其调用不频繁，那就没必要写成内联函数形式。
+
+## 6.46
+不能。函数返回值不是字面值类型。
+
+## 6.47
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter6/6_47.cpp)
+
+## 6.48
+合理。用户设置的循环终止条件是sought(),则循环结束有两种情况，一种是无效输入，一种是用户输入的值与sought()相同，前者会被assert检测到，终止程序，后者则能正常执行assert后面的语句。
+
+## 6.49
+候选函数是同名的重载函数集；
+可行函数是候选函数中符合此次实参列表的函数。
+
+## 6.50
+(a)可行函数: void f(int, int); void f(double, double = 3.14)。调用具有二义性。
+(b)可行函数: void f(int); void f(double, double = 3.14)。最佳匹配是前者。
+(c)可行函数: void f(int, int); void f(double, double = 3.14)。最佳匹配是前者。
+(d)可行函数: void f(int, int); void f(double, double = 3.14)。最佳匹配是后者。
+
+## 6.51 
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter6/6_51.cpp)
+与前一题答案一致
+
+## 6.52
+(a)等级3，类型提升
+(b)等级4，算术类型转换
+
+## 6.53
+(a)常量去后者，非常量去前者。
+(b)常量去后者，非常量去前者。
+(c)两者都是精确匹配，会产生二义性。
+
+## 6.54
+```C++
+//方法一
+int f(int, int);
+vector<decltype(f) *> fvec;
+
+//方法二
+vector<int (*)(int, int)> fvec;
+```
+
+## 6.55
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter6/6_55.cpp)
+
+## 6.56
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter6/6_55.cpp)
