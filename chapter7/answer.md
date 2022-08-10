@@ -83,3 +83,28 @@ private:
     std::string address;
 };
 ```
+
+## 7.20
+非成员函数，但需使用数据成员。
+
+## 7.21
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_2.h)
+
+## 7.22
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_4.h)
+
+## 7.23
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_23.h)
+
+## 7.24
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_23.h)
+
+## 7.25
+能。需要分配类以外的资源的数据成员都使用了string来定义。
+
+## 7.26
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_2.h)
+
+## 7.27
+[头文件](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_23.h)
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_27.cpp)

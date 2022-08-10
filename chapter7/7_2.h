@@ -8,7 +8,11 @@
 
 //***********类***********
 
-struct Sales_data {
+class Sales_data {
+friend Sales_data add(Sales_data &sd1, Sales_data &sd2);
+friend std::istream &read(std::istream &is, Sales_data &sd);
+friend std::ostream &print(std::ostream &os, const Sales_data &sd);
+public:
     //构造函数
     Sales_data() = default;
     Sales_data(const std::string &s): book_num(s) {}
@@ -18,6 +22,8 @@ struct Sales_data {
     //成员函数声明
     Sales_data& combine(const Sales_data &rhs);
     std::string isbn() const;
+private:
+    //成员函数声明
     double AvgPrice() const;
 
     //数据成员
@@ -51,7 +57,7 @@ std::string Sales_data::isbn() const {
 }
 
 //平均售价
-double Sales_data::AvgPrice() const {
+inline double Sales_data::AvgPrice() const {
     if(units_sold == 0)
         return 0;
     else

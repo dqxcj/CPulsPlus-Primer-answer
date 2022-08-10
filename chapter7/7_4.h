@@ -5,6 +5,9 @@
 #include <string>
 
 struct Person {
+friend std::istream& read(std::istream &is, Person &p);
+friend std::ostream& print(std::ostream &os, const Person &p);
+public:
     //构造函数
     Person() = default;
     Person(const std::string &s1, const std::string &s2): name(s1), address(s2) {}
@@ -13,6 +16,7 @@ struct Person {
     //成员函数
     std::string PersonName() const {return name;};
     std::string PersonAddress() const {return address;};
+private:
 
     //数据成员
     std::string name;
