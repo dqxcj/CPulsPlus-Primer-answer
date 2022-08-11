@@ -5,6 +5,7 @@
 
 ## 6.17
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter6/6_17.cpp)
+
 两个函数使用的形参类型不同。第一个函数实参是string对象，由于拷贝string的资源消耗大于引用的，故考虑使用引用形参，又因为不需要修改实参，故使用常量引用的形参；第二个函数实参是string对象，由于需要修改实参对象，故使用引用形参。
 
 ## 6.18
@@ -16,8 +17,11 @@ vector<int>::iterator change_val(int n, vector<int>::iterator it);  //猜测函�
 
 ## 6.19
 (a)不合法，实参数量多于了形参数量
+
 (b)合法
+
 (c)合法
+
 (d)合法
 
 ## 6.20
@@ -113,16 +117,21 @@ decltype(odd) &arrPtr(int i) {
 
 ## 6.39
 (a) 非法。顶级const形参无法与非顶级cost形参区分开来。
+
 (b) 非法 。不允许两个同名函数只有返回值不同。
+
 (c) 合法
 
 ## 6.40
 (a)正确。
+
 (b)错误。默认实参应该放在形参列表尾部。
 
 ## 6.41
 (a)非法。第一个形参不是默认实参，需要写明其对应的实参。
+
 (b)合法。
+
 (c)合法。但是'*'会被转换为其对应的ascii码，变为int，与传入字符的初衷不符。
 
 ## 6.42
@@ -141,6 +150,7 @@ decltype(odd) &arrPtr(int i) {
 
 ## 6.43
 (a)放在头文件。内联函数定义需要放在头文件中，防止多次定义不一致。
+
 (b)放在头文件。函数声明要放在头文件中
 
 ## 6.44
@@ -164,25 +174,33 @@ inline bool isShorter(const string &s1, const string &s2) {
 
 ## 6.49
 候选函数是同名的重载函数集；
+
 可行函数是候选函数中符合此次实参列表的函数。
 
 ## 6.50
 (a)可行函数: void f(int, int); void f(double, double = 3.14)。调用具有二义性。
+
 (b)可行函数: void f(int); void f(double, double = 3.14)。最佳匹配是前者。
+
 (c)可行函数: void f(int, int); void f(double, double = 3.14)。最佳匹配是前者。
+
 (d)可行函数: void f(int, int); void f(double, double = 3.14)。最佳匹配是后者。
 
 ## 6.51 
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter6/6_51.cpp)
+
 与前一题答案一致
 
 ## 6.52
 (a)等级3，类型提升
+
 (b)等级4，算术类型转换
 
 ## 6.53
 (a)常量去后者，非常量去前者。
+
 (b)常量去后者，非常量去前者。
+
 (c)两者都是精确匹配，会产生二义性。
 
 ## 6.54
