@@ -1,10 +1,25 @@
-#ifndef _7_23_H
-#define _7_23_H
+#ifndef _7_32_H
+#define _7_32_H
 
 #include <iostream>
+#include <vector>
 #include <string>
 
+class Screen;
+
+class WindowMgr {
+public:
+    //类型别名
+    using ScreenIndex = std::vector<Screen>::size_type;
+    //成员函数
+    void clear(ScreenIndex i);
+//private:
+    std::vector<Screen> screens_;
+};
+
 class Screen {
+friend void WindowMgr::clear(ScreenIndex i);
+
 public:
     //类型别名
     using pos = std::string::size_type;
@@ -29,6 +44,11 @@ private:
     pos cursor_ = 0, height_ = 0, width_ = 0;  //光标位置，屏幕高，屏幕宽
     std::string contents_;
 };
+//类间友元函数定义
+void WindowMgr::clear(ScreenIndex i) {
+    Screen &s = screens_[i];
+    s.contents_ = std::string(s.height_ * s.width_, ' ');
+}
 
 //成员函数定义
 Screen &Screen::move(pos r, pos c) {

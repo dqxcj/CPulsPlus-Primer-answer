@@ -144,3 +144,20 @@ class Y {
     X x;
 };
 ```
+
+## 7_32
+[头文件](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_32.h)
+
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_32.cpp)
+
+>注意：window_mgr的数据成员不能像书上那样直接就初始化，因为定义window_mgr时Screen类尚未定义，vector无法为screens向量分配内存。
+
+## 7.33
+```C++
+Screen::pos Screen::size() const {
+    return height * width;
+}
+```
+
+## 7.34
+会报错。说明类型别名是在数据成员和函数声明之前编译的。
