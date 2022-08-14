@@ -161,3 +161,134 @@ Screen::pos Screen::size() const {
 
 ## 7.34
 会报错。说明类型别名是在数据成员和函数声明之前编译的。
+
+## 7.35
+```C++
+Type Exercise::setVal(Type parm) { //第一个Type是string，第二个type是double
+    val = parm + initVal(); //initVal是类内的
+    return val;
+}
+```
+setVal声明处返回类型是double，定义处返回类型是string，类型不匹配。改进方法是定义处的第一个Type要用作用域运算符指定为Exercise的。即
+```C++
+Exercise:Type Exercise::setVal(Type parm) {
+    ......
+}
+```
+
+## 7.36
+构造函数初始化顺序只与它们在类定义中出现的顺序有关，故先初始化rem,再初始化base，则构造函数中用尚未定义的base初始化rem是错误的行为。
+
+改进：
+```C++
+X (int i, int j): base(i), rem(i % j) {}
+```
+
+## 7.37
+```C++
+//first_item
+Sales_data(std::istream &is) { read(is, *this); }
+//数据成员的值等于输入的值
+
+//next
+Sales_data(std::string s = " "): bookNo(s) {}
+//bookNo = " ", units_sold = 0, revenue = 0.0
+
+//last
+Sales_data(std::string s = " "): bookNo(s) {}
+//bookNo = "9-999-99999-9", units_sold = 0, revenue = 0.0
+```
+
+## 7.38
+```C++
+Sales_data(std::istream &is = std::cin);
+```
+## 7.39
+不合法。编译器无法确定该使用哪个函数，具有二义性。
+
+## 7.40
+```C++
+class Book {
+public:
+    Book() = default;
+    Book(std::string isbn, double price, std::string bn, std::string an, std::string publisher): isbn_(isbn), price_(price), book_name_(bn), author_name(an), publisher_(publisher) {}
+    Book(std::istream &is) {...}
+private:
+    std::string isbn_;
+    double price_ = 0.0;
+    std::string book_name_;
+    std::string author_name_;
+    std::string publisher_;
+}
+```
+
+## 7.41
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_41.cpp)
+
+## 7.42
+```C++
+class Book {
+public:
+    Book(std::string isbn, double price, std::string bn, std::string an, std::string publisher): isbn_(isbn), price_(price), book_name_(bn), author_name(an), publisher_(publisher) {}
+    Book(): Book(" ", 0, " ", " ", " ") {}
+    Book(std::istream &is): Book() {...}
+private:
+    std::string isbn_;
+    double price_ = 0.0;
+    std::string book_name_;
+    std::string author_name_;
+    std::string publisher_;
+}
+```
+
+## 7.43
+```C++
+class NoDefault {
+public:
+    NoDefault(int n): a(n) {}
+private:
+    int a;
+}
+
+class C {
+public:
+    C(): nd(0) {}
+private:
+    NoDefault nd;
+}
+```
+
+## 7.44
+不合法。NoDefault没有默认构造函数，无法进行默认初始化。
+
+## 7.45
+合法。C有默认构造函数，能进行默认初始化。
+
+## 7.46
+(a)不正确。没有构造函数将会使用编译器的合成默认构造函数。
+(b)不正确。也可能是参数都为默认实参。
+(c)不正确。
+(d)不正确。在定义了其它构造函数的情况下，编译器不会生成合成默认构造函数；在没有定义其它构造函数的情况下，编译器不会初始化内置类型和复合类型的变量。
+
+## 7.47
+应该。
+
+## 7.48
+无论有无explicit，都能正确构造item1和item2。
+
+## 7.49
+(a)正确运行。
+(b)报错。因为类型转换后的实参是个临时变量，不能传递给非常量引用
+(c)报错。combine需要改变对象的内容，不能设为常量常量成员函数。
+
+## 7.50
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter7/7_4.h)
+
+## 7.51
+string希望使用string为形参的函数也可以使用const char*作为实参。
+但vector不希望使用vector为形参的函数使用int作为实参。
+
+## 7.52
+64页的Sales_data类具有类内初始值，不能当作聚合类来初始化。
+
+修改方法：去掉Sales_data的类内初始值即可。

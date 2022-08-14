@@ -11,7 +11,7 @@ public:
     //构造函数
     Person() = default;
     Person(const std::string &s1, const std::string &s2): name(s1), address(s2) {}
-    Person(std::istream &is);
+    explicit Person(std::istream &is);
 
     //成员函数
     std::string PersonName() const {return name;};
