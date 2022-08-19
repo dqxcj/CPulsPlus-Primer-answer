@@ -298,3 +298,48 @@ string希望使用string为形参的函数也可以使用const char*作为实参
 64页的Sales_data类具有类内初始值，不能当作聚合类来初始化。
 
 修改方法：去掉Sales_data的类内初始值即可。
+
+
+## 7.53
+```C++
+class Debug {
+public:
+    constexpr Debug(bool b = true): hw(b), io(b), other(b) {}
+    constexpr Debug(bool h, bool i, bool o): hw(h), io(i), other(o) {}
+
+    constexpr bool any() {return hw || io || other ;}
+    void set_hw(bool b) {hw = b;}
+    void set_io(bool b) {io = b;}
+    void set_other(bool b) {other = b;}
+private:
+    bool hw;
+    bool io;
+    bool other;
+};
+```
+
+## 7.54
+不应该，因为它有除了返回语句之外的可执行语句。
+
+## 7.55
+不是，因为其是数据成员s是string(非字面值类型)。
+
+## 7.56
+类当中与类本身直接相关，而不是与类的各个对象相关的成员叫作静态成员； ；普通成员属于某一个具体的对象，静态成员属于类，普通成员不能作为默认实参，静态成员可以。
+
+## 7.57
+```C++
+class Account {
+public:
+    static double rate() {return interestRate;}
+    static void rate(double);
+private:
+    static constexpr int period = 30;
+    double daily_tbl[period];
+};
+
+constexpr int Account::period;
+```
+
+## 7.58
+rate和vec作为非常量静态成员，不能再类内初始化，应该在类外初始化。
