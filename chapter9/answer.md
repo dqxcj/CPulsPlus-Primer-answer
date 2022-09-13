@@ -143,3 +143,16 @@ while(iter != iv.begin() + old_size / 2 + count) {
     }
 }
 ```
+
+## 9.23
+val指向唯一的元素；val2指向唯一的元素；val3指向唯一的元素；val4指向唯一的元素
+
+## 9.24
+会报错
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter9/9_24.cpp)
+
+## 9.25
+相等则什么也不删除；
+
+## 9.26
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter9/9_26.cpp)
