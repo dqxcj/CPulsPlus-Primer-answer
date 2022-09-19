@@ -156,3 +156,29 @@ val指向唯一的元素；val2指向唯一的元素；val3指向唯一的元素
 
 ## 9.26
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter9/9_26.cpp)
+
+## 9.27
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter9/9_27.cpp)
+
+## 9.28
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter9/9_28.cpp)
+
+## 9.29
+vec.resize(100)会增加75个新元素，新元素的值为默认值；vec.resize(10)会删除靠后的90个元素。
+
+## 9.30
+元素类型有默认值或默认构造函数。
+
+## 9.31
+list和forward_list的迭代器不支持加减运算，因此需要多次调用自增符号。
+
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter9/9_31.cpp)
+
+## 9.32
+很多编译器（包括书籍作者使用的）对于函数形参都是从右往左进行处理，因此先处理第二个形参*iter++，此后处理第一个形参时，iter已经由于自增而指向了下一个位置，这会造成错误。
+
+## 9.33
+对于不同的容器会有不同的现象。vector或string还能正常运行，因为插入元素只会使该位置之后的迭代器失效；deque则不能正常运行，因为插入元素会使全部迭代器失效；list和forward_list还能正常运行，插入元素不会使迭代器失效。
+
+## 9.34
+该程序的目的是复制奇数值；但程序存在会造成死循环的错误，应该将++iter改为iter+=2。
