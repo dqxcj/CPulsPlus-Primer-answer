@@ -182,3 +182,19 @@ list和forward_list的迭代器不支持加减运算，因此需要多次调用�
 
 ## 9.34
 该程序的目的是复制奇数值；但程序存在会造成死循环的错误，应该将++iter改为iter+=2。
+
+## 9.35
+capacity是vector可容纳元素的最大数量，size是vector中元素的当前数量。
+
+## 9.36
+不可能。
+
+## 9.37
+list增加新元素时为新元素随机分配地址，不需要执行类似于vector(顺序存取)的迁移原有元素至更大的存储空间的操作，capacity不能提高list增加新元素时的效率，没有意义。
+array的size不能改变，capacity没有意义。
+
+## 9.38
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter9/9_38.cpp)  
+也是翻倍分配的。
+
+## 9.39
