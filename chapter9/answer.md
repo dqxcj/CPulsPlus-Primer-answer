@@ -198,3 +198,8 @@ array的size不能改变，capacity没有意义。
 也是翻倍分配的。
 
 ## 9.39
+将svec的capacity设为1024；给svec增加新元素，此时如果新元素数量超过1024，svec的capacity将会增加；最后将svec中的元素数量改为当前数量的1.5倍，修改后的元素数量如果超过capacity，则capacity会增加。
+
+## 9.40
+仍然是1024；读入512后capacity仍然是1024；读入1000个，resize后就是1500，超过了1024，capacity会增加，增加多少由vector的分配策略决定；读入1048个，超过了1024，capacity会增加，resize后如果再次超过了capacity，capacity还会再次增加。
+
