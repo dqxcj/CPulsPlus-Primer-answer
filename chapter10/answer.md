@@ -34,3 +34,12 @@ b. 错误，泛型算法要求的是足够多的元素，而不是足够大的ca
 
 ## 10.10
 为了算法的通用性，不同的算法改变容器大小的方法不同。算法与容器之间的桥梁是迭代器，算法根本就不知道容器的存在，能否改变容器的大小，全看迭代器。
+
+## 10.11
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_11.cpp)
+
+## 10.12
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_12.cpp)
+
+## 10.13
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_13.cpp)
