@@ -43,3 +43,23 @@ b. 错误，泛型算法要求的是足够多的元素，而不是足够大的ca
 
 ## 10.13
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_13.cpp)
+
+## 10.14
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_14.cpp)
+
+## 10.15
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_15.cpp)
+
+## 10.16
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_16.cpp)
+
+## 10.17
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_17.cpp)
+
+## 10.18
+使用partition后顺序乱了
+
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_18.cpp)
+
+## 10.19
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_19.cpp)
