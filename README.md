@@ -10,5 +10,3 @@
 
 ## [第十章 泛型算法](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/answer.md)
 
-
-Creating a new branch. 
