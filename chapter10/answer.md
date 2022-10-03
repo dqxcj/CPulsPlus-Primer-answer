@@ -63,3 +63,24 @@ b. 错误，泛型算法要求的是足够多的元素，而不是足够大的ca
 
 ## 10.19
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_19.cpp)
+
+## 10.20
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_20.cpp)
+
+## 10.21
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_21.cpp)
+
+## 10.22
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_22.cpp)
+
+## 10.23
+无限个
+
+## 10.24
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_24.cpp)
+
+## 10.25
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_25.cpp)
+
+
+
