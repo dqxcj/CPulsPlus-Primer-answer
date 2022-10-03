@@ -74,7 +74,7 @@ b. 错误，泛型算法要求的是足够多的元素，而不是足够大的ca
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_22.cpp)
 
 ## 10.23
-无限个
+无定值，依情况而定。
 
 ## 10.24
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_24.cpp)
@@ -82,5 +82,13 @@ b. 错误，泛型算法要求的是足够多的元素，而不是足够大的ca
 ## 10.25
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_25.cpp)
 
+## 10.26
+back_inserter调用push_back;
+front_inserter调用push_front;
+inserter调用insert，且插入位置始终不变。
 
+## 10.27
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_27.cpp)
 
+## 10.28
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_28.cpp)
