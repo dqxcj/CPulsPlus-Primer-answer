@@ -92,3 +92,30 @@ inserter调用insert，且插入位置始终不变。
 
 ## 10.28
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_28.cpp)
+
+## 10.29
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_29.cpp)
+
+## 10.30
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_30.cpp)
+
+## 10.31
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_31.cpp)
+
+## 10.32
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_32.cpp)
+
+## 10.33
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_33.cpp)
+
+## 10.34
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_34.cpp)
+
+## 10.35
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_35.cpp)
+
+## 10.36
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_36.cpp)
+
+## 10.37
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_37.cpp)
