@@ -16,3 +16,18 @@ set: 需要频繁查找，查找过程不存在key-value关系
 
 ## 11.4
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_4.cpp)
+
+## 11.5
+map和set最大的区别是map除了key还有value，而set只有key。  
+当需要快速查找时，我优先考虑set，如果在此基础上需要保存key对应的其他信息，则用map。
+
+## 11.6
+set: 快速查找  
+list: 快速插入
+
+## 11.7
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_7.cpp)
+
+## 11.8
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_8.cpp)  
+set的优点是快速查找。
