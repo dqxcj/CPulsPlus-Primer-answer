@@ -137,3 +137,8 @@ copy的前两个迭代器要求输入迭代器，最后一个迭代器是输出�
 reverse的迭代器是双向迭代器；  
 unique的迭代器是前向迭代器。
 
+## 10.41 
+(a) 将[beg, end)范围的old_val替换为new_val;  
+(b) 将[beg, end)范围的使pred为真的值替换为new_val;  
+(c) 将[beg, end)范围的值复制到dest位置，并将复制后的值中的old_val替换为new_val;  
+(d) 将[beg, end)范围的值复制到dest位置，并将复制后的值中使pred为真的值替换为new_val;
