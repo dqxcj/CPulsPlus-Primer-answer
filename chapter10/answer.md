@@ -142,3 +142,6 @@ unique的迭代器是前向迭代器。
 (b) 将[beg, end)范围的使pred为真的值替换为new_val;  
 (c) 将[beg, end)范围的值复制到dest位置，并将复制后的值中的old_val替换为new_val;  
 (d) 将[beg, end)范围的值复制到dest位置，并将复制后的值中使pred为真的值替换为new_val;
+
+## 10.42
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter10/10_42.cpp)
