@@ -40,3 +40,13 @@ set的优点是快速查找。
 
 ## 11.11
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_11.cpp)  
+
+## 11.12
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_12.cpp)  
+
+## 11.13
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_13.cpp)   
+感觉a方式最好理解, 但c方式最方便。
+
+## 11.14
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_14.cpp) 
