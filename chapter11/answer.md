@@ -31,3 +31,12 @@ list: 快速插入
 ## 11.8
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_8.cpp)  
 set的优点是快速查找。
+
+## 11.9
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_9.cpp)  
+
+## 11.10
+前者可以，后者不可以。原因是vector的迭代器是随机访问迭代器，支持<操作，而list的迭代器是双向迭代器，不支持<操作。
+
+## 11.11
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_11.cpp)  
