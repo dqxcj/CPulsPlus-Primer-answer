@@ -93,3 +93,17 @@ pair<map<string, vector<int>::iterator, bool>> insert(pair<string, vector<int>>)
 ```c++
 multimap<string, string> mmap;
 ```
+
+## 11.24
+第一行定义了map<int, int> 的变量m;  
+第二行m[0]在m中添加了关键字为0的元素，并对其进行值初始化，使元素的second为0， = 1 将1赋予给元素的second，使其由0变为1。
+
+## 11.25
+本题程序是错误的，因为v的元素个数为0，v[0]会导致访问越界。
+
+## 11.26
+```c++
+map<string, int> mapSI;
+mapSI["an"] = 1;
+返回类型为int
+```
