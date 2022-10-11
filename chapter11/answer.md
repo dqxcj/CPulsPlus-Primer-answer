@@ -78,3 +78,18 @@ multiset<Sales_data, ptrF> bookstore(&compareIsbn);
 ......
 pair<Sales_data, ptrF>::iterator
 ```
+
+## 11.20
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_20.cpp)  
+下标操作更容易编写和阅读 
+
+## 11.21
+对word_count插入{word, 0}， 如果已经存在word为key的pair，则不插入，只对其second进行自增操作；否则在插入后自增插入元素的second，即0自增为1。
+
+## 11.22
+pair<map<string, vector<int>::iterator, bool>> insert(pair<string, vector<int>>)
+
+## 11.23
+```c++
+multimap<string, string> mmap;
+```
