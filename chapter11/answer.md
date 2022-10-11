@@ -50,3 +50,31 @@ set的优点是快速查找。
 
 ## 11.14
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_14.cpp) 
+
+## 11.15  
+key_type: int  
+mapped_type: vector<int>  
+value_type: pair<const int, vector<int>>
+
+## 11.16
+```c++
+auto it = map.begin();
+it -> second = value;
+```
+
+## 11.17
+(a) 不合法。multiset的迭代器是const的，只能访问，不能写入。    
+(b) 不合法。理由同上。  
+(c) 合法  
+(d) 合法  
+
+## 11.18
+pair<const string, size_t>::iterator
+
+## 11.19
+```c++
+typedef bool (*ptrF)(const Sales_data &lhs, const Sales_data &rhs);
+multiset<Sales_data, ptrF> bookstore(&compareIsbn);
+......
+pair<Sales_data, ptrF>::iterator
+```
