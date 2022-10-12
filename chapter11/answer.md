@@ -128,3 +128,17 @@ pos.first是调用equal_range返回的范围的左迭代器，-> second是该左
 [代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_32.cpp) 
 
 本题不可使用sort排序，multimap本身维护了关键字的字典序，sort不允许对这类在意元素顺序的容器进行排序，要想使用sort，可以先复制到vector中。
+
+## 11.33
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_33.cpp) 
+
+## 11.34
+使用下标会为不存在的字符串建立错误映射，导致程序运行结果不符合预期。
+
+## 11.35
+要注意多条规则关键字相同的情况，下标会不断将前面的映射覆盖，最终使最后一条关键字映射保留；insert则是在发现关键字相同时不采取插入行为，最终使第一条关键字映射保留。
+
+## 11.36
+在我的程序中应该会不进行转换，但程序依旧能够运行。  
+但事实证明，该关键字(用k进行的测试)会被映射为空
+![](https://raw.githubusercontent.com/dqxcj/Study/test/test2/test7/test8/202210121719105.png)
