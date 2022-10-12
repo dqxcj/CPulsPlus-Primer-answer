@@ -107,3 +107,24 @@ map<string, int> mapSI;
 mapSI["an"] = 1;
 返回类型为int
 ```
+
+## 11.27
+查找的同时需要计数则用count，其他查找都使用find
+
+## 11.28
+map<string, int>::iterator it;
+
+## 11.29
+upper_bound == lower_bound == end()  
+equal_range -> first == equal_range -> second == end()
+
+## 11.30
+pos.first是调用equal_range返回的范围的左迭代器，-> second是该左迭代器指向的map的元素(pair类型)的第二个值。
+
+## 11.31 
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_31.cpp)  
+
+## 11.32
+[代码](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_32.cpp) 
+
+本题不可使用sort排序，multimap本身维护了关键字的字典序，sort不允许对这类在意元素顺序的容器进行排序，要想使用sort，可以先复制到vector中。
