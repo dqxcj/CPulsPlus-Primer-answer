@@ -142,3 +142,12 @@ pos.first是调用equal_range返回的范围的左迭代器，-> second是该左
 在我的程序中应该会不进行转换，但程序依旧能够运行。  
 但事实证明，该关键字(用k进行的测试)会被映射为空
 ![](https://raw.githubusercontent.com/dqxcj/Study/test/test2/test7/test8/202210121719105.png)
+
+
+## 11.37
+无序版本的优势是插入、查找效率高，维护成本低；  
+有序版本的优势是有顺序。
+
+## 11.38
+[单词计数程序](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_3.cpp)   
+[单词转换程序](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/11_33.cpp)   
