@@ -45,3 +45,21 @@ q2指向值为42的int，r2指向值为100的int，r2=p2使r2也指向值为42�
 ## 12.13
 释放了p和sp共同指向的内存，此时再使用sp会出错。
 
+## 12.14
+```cpp
+void close_connection(connection *p) {
+    disconnect(*p);
+}
+
+destination d;
+connection c = connect(&d);
+shared_ptr<connection> p(&c, close_connection);
+```
+
+## 12.15
+```cpp
+destination d;
+connection c = connect(&d);
+shared_ptr<connection> p(&c, [](connection *ptr){disconnect(*p);});
+```
+
