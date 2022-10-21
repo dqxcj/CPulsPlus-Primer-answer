@@ -63,3 +63,16 @@ connection c = connect(&d);
 shared_ptr<connection> p(&c, [](connection *ptr){disconnect(*p);});
 ```
 
+## 12.16
+[code](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/12_16.cpp)  
+
+## 12.17
+(a) 非法。  
+(b) 合法，但pi是内置指针，出了作用域就会释放内存空间，则pi将变成空悬指针。  
+(c) 合法。  
+(d) 合法，同(b)  
+(e) 合法。
+(f) 合法，但p2和p5哪个先释放，另一个就会变成空悬指针。
+
+## 12.18
+多个shared_ptr可以指向同一内存，没必要release。
