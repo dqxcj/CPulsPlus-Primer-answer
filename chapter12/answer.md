@@ -76,3 +76,5 @@ shared_ptr<connection> p(&c, [](connection *ptr){disconnect(*p);});
 
 ## 12.18
 多个shared_ptr可以指向同一内存，没必要release。
+
+
