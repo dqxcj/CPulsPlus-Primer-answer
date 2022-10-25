@@ -5,8 +5,10 @@
 #include <vector>
 #include <memory>
 #include <initializer_list>
+#include "StrBlobPtr.h"
 
 class StrBlob {
+    friend class StrBlobPtr;
 public: 
     typedef std::vector<std::string>::size_type size_type;
     StrBlob();
@@ -20,6 +22,9 @@ public:
     const std::string &Front() const;
     std::string &Back();
     const std::string &Back() const;
+
+    StrBlobPtr begin() {return StrBlobPtr(*this);}
+    StrBlobPtr end() {return StrBlobPtr(*this, data -> size());}
 
 private:
     std::shared_ptr<std::vector<std::string>> data;
