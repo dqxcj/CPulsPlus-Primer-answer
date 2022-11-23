@@ -12,7 +12,7 @@ void StrBlob::Check(size_type i, const string &msg) const {
 
 //构造函数
 StrBlob::StrBlob(): data(make_shared<vector<string>>()) {}
-StrBlob::StrBlob(initializer_list<vector<string>> il): data(make_shared<vector<string>>(il)) {}
+StrBlob::StrBlob(initializer_list<string> il): data(make_shared<vector<string>>(il)) {}
 
 
 //public函数
@@ -21,23 +21,21 @@ void StrBlob::PopBack() {
     data -> pop_back();
 }
 
-string &StrBlob::Front() {
+string &StrBlob::Front() const {
     Check(0, "Front on empty StrBlob");
     return data -> front(); 
 }
 
-const string &StrBlob::Front() const {
-    Check(0, "Front(const) on empty StrBlob");
-    return data -> front();
-}
 
-string &StrBlob::Back() {
+string &StrBlob::Back() const {
     Check(0, "Back on empty StrBlob");
     return data -> back();
 }
 
-const string &StrBlob::Back() const {
-    Check(0, "Back(const) on empty StrBlob");
-    return data -> back();
+void StrBlob::Output(ostream &out) const {
+    for(auto &str : *data) {
+        out << str << " ";
+    }
 }
+
 
