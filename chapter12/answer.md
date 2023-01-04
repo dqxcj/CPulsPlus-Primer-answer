@@ -1,4 +1,5 @@
 # 第十二章 动态内存
+笔记: [12.1 动态内存和智能指针](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/12.1动态内存和智能指针.xmind)
 
 ## 12.1
 都是四个
