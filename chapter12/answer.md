@@ -83,4 +83,37 @@ shared_ptr<connection> p(&c, [](connection *ptr){disconnect(*p);});
 ## 12.18
 多个shared_ptr可以指向同一内存，没必要release后再给另一个shared_ptr赋值。
 
+## 12.19
+[StrBlob.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/StrBlob.cpp)  
+[StrBlobPtr.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/StrBlobPtr.cpp)  
+[StrBlob.h](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/StrBlob.h)    
+[main.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/main.cpp)
+
+执行方法:
+chapter12目录下新建bin目录，然后终端输入  
+```shell
+make main
+./12_20
+```
+
+## 12.20
+[12_20_infile.txt](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/12_20_infile.txt)
+[12_20.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/12_20.cpp)
+
+执行方法:
+chapter12目录下新建bin目录，然后终端输入  
+```shell
+make 12_20
+./12_20
+```
+
+## 12.21
+题目中的写法也可执行，不会报错。但书中的写法更易读、易修改。
+
+## 12.22
+[StrBlob.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/StrBlob.cpp)  
+[StrBlobPtr.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/StrBlobPtr.cpp)  
+[StrBlob.h](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/StrBlob.h)    
+[12_22.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/12_22.cpp)
+
 

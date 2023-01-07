@@ -1,4 +1,4 @@
-#include "StrBlobPtr.h"
+#include "StrBlob.h"
 #include <vector>
 #include <string>
 using namespace std;
@@ -19,6 +19,7 @@ shared_ptr<vector<string>> StrBlobPtr::check(size_t sz, const string &msg) const
 string &StrBlobPtr::deref() const {
     auto p = check(curr, "dereference past end");
     return (*p)[curr];
+    // return (*check(curr, "dereference past end"))[curr];
 }
 
 StrBlobPtr &StrBlobPtr::incr() {

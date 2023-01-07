@@ -32,5 +32,17 @@ string &StrBlob::Back() const {
     return data -> back();
 }
 
+StrBlobPtr StrBlob::begin() { 
+    return StrBlobPtr(*this); 
+}
+StrBlobPtr StrBlob::end() { 
+    return StrBlobPtr(*this, data->size()); 
+}
 
+StrBlobPtr StrBlob::begin() const{ 
+    return StrBlobPtr(*this); 
+}
+StrBlobPtr StrBlob::end() const{ 
+    return StrBlobPtr(*this, data->size()); 
+}
 

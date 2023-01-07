@@ -1,3 +1,8 @@
 *.exe
 *.json
 *Note.md
+*.o
+*.out
+*12_20
+*12_22
+*main

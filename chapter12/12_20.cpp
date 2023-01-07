@@ -3,7 +3,6 @@
 #include <fstream>
 
 #include "StrBlob.h"
-#include "StrBlobPtr.h"
 
 using namespace std;
 
@@ -14,7 +13,7 @@ int main() {
     while(getline(in, line)) {
         sb.PushBack(line);
     }
-    for(auto sbp = sb.begin(); sbp.Curr() < sb.Size(); sbp.incr()) {
+    for(auto sbp = sb.begin(); ; sbp.incr()) {
         cout << sbp.deref() << endl;
     }
     return 0;
