@@ -1,5 +1,6 @@
 #include <iostream>
 #include "StrBlob.h"
+#include "StrBlobPtr.h"
 using namespace std;
 
 int main() {
@@ -7,6 +8,6 @@ int main() {
     StrBlob stb2 = {"hello", "world", "hh"};
     stb1 = stb2;
     stb2.PushBack("nihao");
-    stb1.Output(cout);
+    cout << stb1.begin().deref() << endl;
     return 0;
 }

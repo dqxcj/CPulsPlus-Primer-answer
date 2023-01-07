@@ -6,10 +6,10 @@
 #include <memory>
 #include <initializer_list>
 #include <iostream>
-// #include "StrBlobPtr.h"
+#include "StrBlobPtr.h"
 
 class StrBlob {
-    // friend class StrBlobPtr;
+friend class StrBlobPtr;
 public: 
     using size_type =  std::vector<std::string>::size_type;
     StrBlob();
@@ -22,10 +22,9 @@ public:
     std::string &Front() const;
     std::string &Back() const;
 
-    // StrBlobPtr begin() {return StrBlobPtr(*this);}
-    // StrBlobPtr end() {return StrBlobPtr(*this, data -> size());}
+    StrBlobPtr begin() {return StrBlobPtr(*this);}
+    StrBlobPtr end() {return StrBlobPtr(*this, data -> size());}
 
-    void Output(std::ostream &out) const;
 
 private:
     std::shared_ptr<std::vector<std::string>> data;

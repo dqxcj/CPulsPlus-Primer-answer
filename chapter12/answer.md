@@ -67,6 +67,10 @@ shared_ptr<connection> p(&c, [](connection *ptr){disconnect(*p);});
 
 ## 12.16
 [code](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/12_16.cpp)  
+报错: 
+```
+无法引用 函数 "std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp> &) [其中 _Tp=int, _Dp=std::default_delete<int>]" (已声明 所在行数:394，所属文件:"D:\Program_Files\mingw-64\mingw64\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\unique_ptr.h") -- 它是已删除的函数
+```
 
 ## 12.17
 (a) 非法。  
@@ -74,9 +78,9 @@ shared_ptr<connection> p(&c, [](connection *ptr){disconnect(*p);});
 (c) 合法。  
 (d) 合法，同(b)  
 (e) 合法。
-(f) 合法，但p2和p5哪个先释放，另一个就会变成空悬指针。
+(f) 合法。get()返回的是内置指针，可以用于初始化unique_ptr。
 
 ## 12.18
-多个shared_ptr可以指向同一内存，没必要release。
+多个shared_ptr可以指向同一内存，没必要release后再给另一个shared_ptr赋值。
 
 

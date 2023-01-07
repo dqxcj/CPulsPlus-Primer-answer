@@ -32,10 +32,5 @@ string &StrBlob::Back() const {
     return data -> back();
 }
 
-void StrBlob::Output(ostream &out) const {
-    for(auto &str : *data) {
-        out << str << " ";
-    }
-}
 
 
