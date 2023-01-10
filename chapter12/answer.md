@@ -116,4 +116,14 @@ make 12_20
 [StrBlob.h](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/StrBlob.h)    
 [12_22.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/12_22.cpp)
 
+## 12_23
+[12_23.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/12_23.cpp)
 
+## 12_24
+[12_24.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/12_24.cpp)
+
+## 12_25
+delete []pa;
+
+## 12_26
+[12_26.cpp](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/12_26.cpp)
