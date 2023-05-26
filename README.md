@@ -13,3 +13,5 @@
 ## [第十一章 关联容器](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter11/answer.md)
 
 ## [第十二章 动态内存](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter12/answer.md)
+
+## [第十三章 拷贝控制](https://github.com/dqxcj/C-Primer-answer/blob/main/chapter13/answer.md)
